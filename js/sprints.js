@@ -1,4 +1,3 @@
-
 function toggleSprintForm() {
     var element = document.querySelector(".sprint-form");
     element.classList.toggle('hidden');
@@ -71,10 +70,8 @@ function renderSprint() {
 }
 renderSprint();
 
-
 function renderSprintSelect() {
     document.getElementById("sprint-select").selectedIndex = '';
-
     var sprintSelect = document.getElementById('sprint-select');
     var selectContent = "";
     for (var i = 0; i < sprintsList.length; i++) {
@@ -86,10 +83,3 @@ function renderSprintSelect() {
     console.log(item);
 }
 renderSprintSelect();
-
-
-
-
-
-
-
