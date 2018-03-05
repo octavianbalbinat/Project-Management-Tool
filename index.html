@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Project Management Tool</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <h4>Users:</h4>
+        <section id="sidebar-u-content"></section>
+        <h4>Sprints:</h4>
+        <section id="sidebar-s-content"></section>
+    </aside>
+
+    <div class="container">
+        <div class="container-fluid">
+
+
+            <h2>Project Management Tool</h2>
+            <form>
+                <header class="form-header">
+                    <h3>Create new:</h3>
+                    <button class="btn btn-primary" onclick="toggleIssueForm()" type="button">Issue</button>
+                    <button class="btn btn-primary" onclick="toggleUserForm()" type="button">User</button>
+                    <button class="btn btn-primary" onclick="toggleSprintForm()" type="button">Sprint</button>
+                </header>
+            </form>
+
+            <form class="sprint-form hidden" id="sprintForm">
+                <div class="form-group row">
+                    <label for="sname">Sprint:</label>
+                    <input class="form-control" type="text" placeholder="Sprint name" name="sname" id="sname" />
+                    <button class="btn btn-primary" onclick="onAddSprintClick()" type="button">Add</button>
+                </div>
+            </form>
+
+            <form class="user-form hidden" id="userForm">
+                <div class="form-group row">
+                    <label for="uname">User:</label>
+                    <input class="form-control" type="text" placeholder="User name" name="uname" id="uname" />
+                    <button class="btn btn-primary" onclick="onAddUserClick()" type="button">Add</button>
+                </div>
+            </form>
+
+            <form class="issue-form hidden" id="issueForm">
+                <div class="form-group row">
+                    <div class="type-select">
+                        <label for="type-select">Type:</label>
+                        <select id="type-select">
+                            <option value="Feature">Feature</option>
+                            <option value="Bug">Bug</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="iname">Name:</label>
+                    <input class="form-control" type="text" placeholder="Issue name" name="iname" id="iname" />
+                </div>
+                <div class="form-group row">
+                    <div class="sprint-dropdown">
+                        <label for="sprint-select">Sprint: </label>
+                        <select id="sprint-select">
+                            <option value="1">Sprint 1</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="user-select">
+                        <label for="user-select">User:</label>
+                        <select id="user-select">
+                            <option value="Octavian Balbinat">Octavian Balbinat</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="iassignee">Assignee:</label>
+                    <input class="form-control" type="text" placeholder="Issue assignee" name="iasignee" id="iassignee" />
+                </div>
+                <div class="form-group row">
+                    <label for="idescription">Description:</label>
+                    <input class="form-control" type="text" placeholder="Issue description" name="idescription" id="idescription" />
+                </div>
+                <div class="form-group row">
+                    <div class="status-dropdown">
+                        <label for="status-select">Status:</label>
+                        <select id="status-select">
+                            <option value="New">New</option>
+                            <option value="In progress">In progress</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Rework">Rework</option>
+                            <option value="Resolved">Resolved</option>
+                            <option value="Ready for Testing">Ready for Testing</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="itask">Task:</label>
+                    <input class="form-control" type="text" placeholder="Issue task" name="itask" id="itask" />
+                </div>
+                <div class="form-group row">
+                    <label for="icomment">Comment:</label>
+                    <input class="form-control" type="text" placeholder="Issue comment" name="icomment" id="icomment" />
+                </div>
+                <div class="form-group row">
+                    <button class="btn btn-primary" onclick="onAddIssueClick()" type="button">Add</button>
+                </div>
+        </div>
+        </form>
+
+
+
+        <!--                                            Table                                           -->
+        <div id="sprintList"></div>
+
+        <footer class="footer">
+            <p>A Project Managemnt Tool created by Octavian Balbinat</p>
+        </footer>
+
+    </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/issues.js"></script>
+    <script src="js/sprints.js"></script>
+</body>
+
+</html>

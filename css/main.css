@@ -1,0 +1,68 @@
+.container-fluid{
+    margin: 6%;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#div1{
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        background-color: lightblue;
+        margin-top: 20px;
+}
+
+.hidden {
+        display: none;
+}
+
+#sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+#sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.form-control {
+width: 30%;
+text-align: center;
+}
+
+form {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    padding-left: 40%;
+}
+
+h4 {
+    text-align: center;
+}
+
+label {
+    -webkit-text-size-adjust: 100%
+}
